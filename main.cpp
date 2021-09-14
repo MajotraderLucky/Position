@@ -1,26 +1,27 @@
 #include <iostream>
 class Position {
 private:
-    int open;
+    int pOpen;
     int sLoss;
     int tProfit;
 public:
-int risk(int open, int sLoss) {
-    return sLoss - open;
+int risk(int sLoss, int pOpen) {
+    return sLoss - pOpen;
     }
-    void setPosition(int position_open, int position_sLoss)
+    int setPosition(int position_pOpen, int position_sLoss)
     {
-    open = position_open;
+    pOpen = position_pOpen;
     sLoss = position_sLoss;
     }
 };
 int main() {
-    int open = 11;
-    int sLoss = 5;
+    //int pOpen = 11;
+    //int sLoss = 5;
 
     Position newLong;
-    newLong.setPosition(int position_open, int position_sLoss);
-    newLong.risk(int open, int sLoss);
-    std::cout << newLong.risk(int open, int sLoss);
+    int position_pOpen = 11;
+    int position_sLoss = 5;
+    newLong.setPosition(position_sLoss, position_pOpen);
+    std::cout << newLong.risk(position_sLoss, position_pOpen);
     return 0;
 }
