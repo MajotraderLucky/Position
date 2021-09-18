@@ -3,4 +3,7 @@ project(Position)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Position main.cpp)
+add_executable(Position Position.cpp)
+add_executable(MaxRisk MaxRisk.cpp)
+
+
