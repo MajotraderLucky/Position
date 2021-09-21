@@ -13,7 +13,7 @@ double maxRisk(double sLoss, double pOpen, double pRisk) {
     {
     pOpen   = position_pOpen;
     sLoss   = position_sLoss;
-    pRisk = position_pRisk;
+    pRisk   = position_pRisk;
     }
 };
 int main() {
