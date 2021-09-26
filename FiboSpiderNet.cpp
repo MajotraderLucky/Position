@@ -71,6 +71,8 @@ int main() {
         std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
         fiboWaves_fLevel = 78.6;
         std::cout << "Уровень фибо 0,786 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+    } else {
+        std::cout << "Введены некорректные данные!\n";
     }
 }
 
