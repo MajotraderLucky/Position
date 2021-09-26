@@ -11,6 +11,12 @@ public:
     double fiboLine(double fFinish, double fLongWave, double fLevel) {
         return fFinish - ((fLongWave / 100) * fLevel);
     }
+
+public:
+    double fiboLineShort(double fFinish, double fLongWave, double fLevel) {
+        return fFinish + ((fLongWave / 100) * fLevel);
+    }
+
     double setFiboWaves(double fiboWaves_fStart, double fiboWaves_fFinish, double fiboWaves_fLongWave, double fiboWaves_fPercentWave, double fiboWaves_fLevel)
     {
         fStart       = fiboWaves_fStart;
@@ -35,7 +41,7 @@ int main() {
         double fiboWaves_fPercentWave;
         fiboWaves_fPercentWave = (fiboWaves_fLongWave / fiboWaves_fFinish) * 100;
         std::cout << "Производим расчёт длинной позиции.\n";
-        std::cout << "Длинна волны внутри сетки Фибо = " << fiboWaves_fLongWave << "\n";
+        std::cout << "Длинна волны внутри сетки Фибо = " << fiboWaves_fLongWave << " пунктов.\n";
         std::cout << "Длинна волны в процентах = " << fiboWaves_fPercentWave << " %\n";
            double fiboWaves_fLevel = 23.6;
          initFibo.setFiboWaves (fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel, fiboWaves_fPercentWave, fiboWaves_fStart);
@@ -49,7 +55,22 @@ int main() {
            fiboWaves_fLevel = 78.6;
          std::cout << "Уровень фибо 0,786 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
     } else if (fiboWaves_fStart > fiboWaves_fFinish) {
-
+         double fiboWaves_fLongWave = fiboWaves_fStart - fiboWaves_fFinish;
+         double fiboWaves_fPercentWave = (fiboWaves_fLongWave / fiboWaves_fStart) * 100;
+        std::cout << "Производим расчёт длинной позиции.\n";
+        std::cout << "Длинна волны внутри сетки Фибо = " << fiboWaves_fLongWave << "\n";
+        std::cout << "Длинна волны в процентах = " << fiboWaves_fPercentWave << " %\n";
+         double fiboWaves_fLevel = 23.6;
+        initFibo.setFiboWaves (fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel, fiboWaves_fPercentWave, fiboWaves_fStart);
+        std::cout << "Уровень фибо 0,236 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+         fiboWaves_fLevel = 38.2;
+        std::cout << "Уровень фибо 0,382 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+         fiboWaves_fLevel = 50.0;
+        std::cout << "Уровень фибо 0,500 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+         fiboWaves_fLevel = 61.8;
+        std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+        fiboWaves_fLevel = 78.6;
+        std::cout << "Уровень фибо 0,786 = " << initFibo.fiboLineShort(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
     }
 }
 
