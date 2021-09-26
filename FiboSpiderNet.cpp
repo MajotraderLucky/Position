@@ -37,24 +37,18 @@ int main() {
         std::cout << "Производим расчёт длинной позиции.\n";
         std::cout << "Длинна волны внутри сетки Фибо = " << fiboWaves_fLongWave << "\n";
         std::cout << "Длинна волны в процентах = " << fiboWaves_fPercentWave << " %\n";
-        double fiboWaves_fLevel = 23.6;
-        initFibo.setFiboWaves (fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel, fiboWaves_fPercentWave, fiboWaves_fStart);
-        std::cout << "Уровень фибо 0,236 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel);
+           double fiboWaves_fLevel = 23.6;
+         initFibo.setFiboWaves (fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel, fiboWaves_fPercentWave, fiboWaves_fStart);
+         std::cout << "Уровень фибо 0,236 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+           fiboWaves_fLevel = 38.2;
+         std::cout << "Уровень фибо 0,382 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+           fiboWaves_fLevel = 50.0;
+         std::cout << "Уровень фибо 0,500 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+           fiboWaves_fLevel = 61.8;
+         std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+           fiboWaves_fLevel = 78.6;
+         std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
 
-        ///
-        /*Область ниже ещё не переписана!
-        double fibo_382 = finish - ((longWave / 100) * 38.2);
-        std::cout << "Уровень фибо 0.382 = " << fibo_382 << "\n";
-        double fibo_500 = finish - ((longWave / 100) * 50);
-        std::cout << "Уровень фибо 0.500 = " << fibo_500 << "\n";
-        double fibo_618 = finish - ((longWave / 100) * 61.8);
-        std::cout << "Уровень фибо 0.618 = " << fibo_618 << "\n";
-        double fibo_786 = finish - ((longWave / 100) * 78.6);
-        std::cout << "Уровень фибо 0.786 = " << fibo_786 << "\n";
-        //Начинаем расчёт позиции
-        Position::open = fibo_382;
-        std::cout << "Тестовый вывод данных класса Position - Position.open = " << Position::open << "\n";
-         */
     }
 }
 
