@@ -47,7 +47,8 @@ int main() {
            fiboWaves_fLevel = 61.8;
          std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
            fiboWaves_fLevel = 78.6;
-         std::cout << "Уровень фибо 0,618 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+         std::cout << "Уровень фибо 0,786 = " << initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel) << "\n";
+    } else if (fiboWaves_fStart > fiboWaves_fFinish) {
 
     }
 }
