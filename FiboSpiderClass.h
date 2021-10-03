@@ -18,4 +18,5 @@ public:
         pRisk = position_pRisk;
     }
 };
+
 #endif //POSITION_FIBOSPIDERCLASS_H

@@ -59,17 +59,32 @@ int main() {
          // Рассчитаем риск позиции открытой по сетке фибо
            Position initPosition;
                     double position_pRisk;
-                   std::cout << "Определите риск для первой сделки от уровня 0,382\n";
-                   std::cout << "---> ";
-                   std::cin >> position_pRisk;
-                   fiboWaves_fLevel = 38.2;
-                    double position_pOpen = initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel);
-                   std::cout << "Первый вход от уровня 0,382 по цене " << position_pOpen << "\n";
-                    double position_sLoss;
-                   std::cout << "Укажите уровень stop loss\n";
-                   std::cout << "---> ";
-                   std::cin >> position_sLoss;
-                   std::cout << "Размер первого ордера = " << initPosition.maxRisk(position_sLoss, position_pOpen, position_pRisk);
+        std::cout << "Определите риск для первой сделки от уровня 0,382\n";
+        std::cout << "---> ";
+        std::cin >> position_pRisk;
+        fiboWaves_fLevel = 38.2;
+        double position_pOpen = initFibo.fiboLine(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel);
+        std::cout << "Первый вход от уровня 0,382 по цене " << position_pOpen << "\n";
+        double position_sLoss;
+        std::cout << "Укажите уровень stop loss\n";
+        std::cout << "---> ";
+        std::cin >> position_sLoss;
+        std::cout << "Размер первого ордера = " << initPosition.maxRisk(position_sLoss, position_pOpen, position_pRisk)
+                  << "\n";
+        //Первый ордер расчитан. Теперь расчитаем второй ордер.
+        std::cout << "Будет ли создан второй ордер? y or n?\n";
+        std::cout << " ---> ";
+        std::string yes = "y";
+        std::string no = "n";
+        std::string answer;
+        std::cin >> answer;
+        if (answer == "y") {
+            FiboWaves initFibo500;
+            initFibo500.setFiboWaves(fiboWaves_fFinish, fiboWaves_fLongWave, fiboWaves_fLevel, fiboWaves_fPercentWave,
+                                     fiboWaves_fStart);
+            fiboWaves_fLevel = 50.0;
+
+        }
 
     } else if (fiboWaves_fStart > fiboWaves_fFinish) {
          double fiboWaves_fLongWave = fiboWaves_fStart - fiboWaves_fFinish;
